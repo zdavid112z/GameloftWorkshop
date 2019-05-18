@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  	<object name="screenWidth" value="1440"/>
+  	<object name="screenHeight" value="900"/>
+  	<object name="windowTitle" value="Tiny little triangles"/>
+  	<object name="clearColor" value="0 0 0 1"/>
+</root>

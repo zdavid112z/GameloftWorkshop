@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sceneManager>
+
+  <gamemode type="debug"/>
+  
+  <backgroundColor>
+    <r>0.53</r>
+    <g>0.81</g>
+    <b>0.92</b>
+  </backgroundColor>
+
+  <cameras>
+
+    <camera name="shadowMap">
+      <priority>0</priority>
+      <postprocess>
+        <target>
+          <type>framebuffer</type>
+          <color>
+            <type>renderbuffer</type>
+          </color>
+          <depth>
+            <type>texture</type>
+          </depth>
+          <stencil>
+            <type>none</type>
+          </stencil>
+          <size>
+            <x>2048</x>
+            <y>2048</y>
+          </size>
+        </target>
+
+      </postprocess>
+      <position>
+        <x>-865.035156</x>
+        <y>735.446899</y>
+        <z>908.247925</z>
+      </position>
+      <up>
+        <x>0.412909</x>
+        <y>0.869059</y>
+        <z>-0.272475</z>
+      </up>
+      <target>
+        <x>-864.309814</x>
+        <y>734.952209</y>
+        <z>907.769287</z>
+      </target>
+      <clearColor>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>1.0</b>
+        <a>1.0</a>
+      </clearColor>
+      <cullFace>none</cullFace>
+      <ortho>
+        <x>-500</x>
+        <y>500</y>
+        <z>-500</z>
+        <w>500</w>
+      </ortho>
+      <near>1000</near>
+      <far>2500</far>
+    </camera>
+    
+    <camera name="mainCamera">
+      <cullFace>none</cullFace>
+      <priority>100</priority>
+      
+      <postprocess>
+
+        <target>
+          <type>framebuffer</type>
+          <screenRatio>1</screenRatio>
+          <color>
+            <type>texture</type>
+            <format>rgb</format>
+          </color>
+          <depth>
+            <type>renderbuffer</type>
+          </depth>
+          <stencil>
+            <type>none</type>
+          </stencil>
+        </target>
+        
+        <effects>
+          
+          <effect>
+            <type>lumaThreshold</type>
+            <threshold>
+              <x>0.7</x>
+              <y>0.9</y>
+            </threshold>
+            <output>
+              <type>framebuffer</type>
+              <screenRatio>1</screenRatio>
+              <color>
+                <type>texture</type>
+              </color>
+              <depth>
+                <type>none</type>
+              </depth>
+              <stencil>
+                <type>none</type>
+              </stencil>
+            </output>
+          </effect>
+
+          <effect>
+            <type>blur</type>
+            <horizontal>true</horizontal>
+            <output>
+              <type>framebuffer</type>
+              <screenRatio>0.8</screenRatio>
+              <color>
+                <type>texture</type>
+              </color>
+              <depth>
+                <type>none</type>
+              </depth>
+              <stencil>
+                <type>none</type>
+              </stencil>
+            </output>
+          </effect>
+
+          <effect>
+            <type>blur</type>
+            <horizontal>false</horizontal>
+            <output>
+              <type>framebuffer</type>
+              <screenRatio>0.8</screenRatio>
+              <color>
+                <type>texture</type>
+              </color>
+              <depth>
+                <type>none</type>
+              </depth>
+              <stencil>
+                <type>none</type>
+              </stencil>
+            </output>
+          </effect>
+
+          <effect>
+            <type>blur</type>
+            <horizontal>true</horizontal>
+            <output>
+              <type>framebuffer</type>
+              <screenRatio>0.4</screenRatio>
+              <color>
+                <type>texture</type>
+              </color>
+              <depth>
+                <type>none</type>
+              </depth>
+              <stencil>
+                <type>none</type>
+              </stencil>
+            </output>
+          </effect>
+
+          <effect>
+            <type>blur</type>
+            <horizontal>false</horizontal>
+            <output>
+              <type>framebuffer</type>
+              <screenRatio>0.4</screenRatio>
+              <color>
+                <type>texture</type>
+              </color>
+              <depth>
+                <type>none</type>
+              </depth>
+              <stencil>
+                <type>none</type>
+              </stencil>
+            </output>
+          </effect>
+
+          <effect>
+            <type>blur</type>
+            <horizontal>true</horizontal>
+            <output>
+              <type>framebuffer</type>
+              <screenRatio>0.4</screenRatio>
+              <color>
+                <type>texture</type>
+              </color>
+              <depth>
+                <type>none</type>
+              </depth>
+              <stencil>
+                <type>none</type>
+              </stencil>
+            </output>
+          </effect>
+
+          <effect>
+            <type>additive</type>
+            <factors>
+              <x>0.5</x>
+              <y>1</y>
+              <z>0</z>
+              <w>0</w>
+            </factors>
+
+            <textures>
+              <texture>
+                <type>source</type>
+              </texture>
+            </textures>
+            
+          </effect>
+
+          <textures>
+            
+          </textures>
+        </effects>
+      </postprocess>
+      
+      <viewsDebug>true</viewsDebug>
+      <position>
+        <x>0</x>
+        <y>100</y>
+        <z>0</z>
+      </position>
+      <target>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </target>
+      <up>
+        <x>0</x>
+        <y>0</y>
+        <z>1</z>
+      </up>
+      <clearColor>
+        <r>0.5</r>
+        <g>0.5</g>
+        <b>1.0</b>
+        <a>1.0</a>
+      </clearColor>
+      <translationSpeed>250</translationSpeed>
+      <rotationSpeed>0.0025</rotationSpeed>
+      <fov>45</fov>
+      <near>0.2</near>
+      <far>10000</far>
+    </camera>
+    <!-- eventual si alte cameras -->
+  </cameras>
+  <activeCamera>mainCamera</activeCamera>
+
+
+  <objects>
+    <object id="8">
+      <noCollision>true</noCollision>
+      <dontDrawNormals>true</dontDrawNormals>
+      <terrainSize>
+        <x>100</x>
+        <y>100</y>
+      </terrainSize>
+      <texMultSingle>0.3</texMultSingle>
+      <cameraHeight>3</cameraHeight>
+      <shader>3</shader>
+      <type>terrain</type>
+      <blend>false</blend>
+      <name>Teren</name>
+      <textures>
+        <texture name="terrain_blend_map"/>
+        <texture name="grass"/>
+        <texture name="dirt"/>
+        <texture name="rock"/>
+      </textures>
+      <rotation>
+        <x>0.0</x>
+        <y>0.0</y>
+        <z>0.0</z>
+      </rotation>
+      <scale>
+        <x>50.0</x>
+        <y>1.0</y>
+        <z>50.0</z>
+      </scale>
+      <specularIntensity>0.0</specularIntensity>
+      <terrainHeights>
+        <r>30</r>
+        <g>12</g>
+        <b>0</b>
+      </terrainHeights>
+    </object>
+
+    <!--
+		<object name="bus">
+			<model>bus</model>
+			<shader>default</shader>
+			<type>normal</type>
+			<textures>
+				<texture name="bus"/>
+			</textures>
+			<position>
+				<x>400</x>
+				<y>0</y>
+				<z>0</z>
+			</position>
+			<rotation>
+				<x>0</x>
+				<y>0.785</y>
+				<z>0</z>
+			</rotation>
+		</object>
+-->
+    <object id="1">
+      <model>cottage</model>
+      <!-- id model -->
+      <shader>default</shader>
+      <!-- id shader -->
+      <type>normal</type>
+      <blend>true</blend>
+      <name>Cocrcodil_verde</name>
+      <shininess>
+        <x>0.0</x>
+        <y>1.0</y>
+      </shininess>
+      <textures>
+        <texture name="cottage_diffuse"/>
+        <texture name="cottage_diffuse"/>
+        <texture name="cottage_normal"/>
+      </textures>
+      <position>
+        <x>20.5</x>
+        <y>90</y>
+        <z>21.22</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>1.0</x>
+        <y>1.0</y>
+        <z>1.0</z>
+      </scale>
+      <diffuseColor>
+        <r>1</r>
+        <g>0</g>
+        <b>1</b>
+        <a>0</a>
+      </diffuseColor>
+      <specularColor>
+        <r>1</r>
+        <g>1</g>
+        <b>1</b>
+        <a>1</a>
+      </specularColor>
+      <defaultNormal>
+        <r>0</r>
+        <g>0</g>
+        <b>1</b>
+        <a>0</a>
+      </defaultNormal>
+      <specularPower>8</specularPower>
+      <diffuseIntensity>1</diffuseIntensity>
+      <specularIntensity>0.1</specularIntensity>
+    </object>
+
+    <object name="coolSphere">
+      <model>cube</model>
+      <shader>default</shader>
+      <type>normal</type>
+      <blend>true</blend>
+      <shininess>
+        <x>1.0</x>
+        <y>0.2</y>
+      </shininess>
+      <textures>
+        <texture name="bricksDiffuse"/>
+        <texture name="bricksSpecular"/>
+        <texture name="bricksNormal"/>
+      </textures>
+      <position>
+        <x>320.5</x>
+        <y>81</y>
+        <z>221.22</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>50.0</x>
+        <y>50.0</y>
+        <z>50.0</z>
+      </scale>
+      <diffuseColor>
+        <r>1</r>
+        <g>0</g>
+        <b>1</b>
+        <a>0.0</a>
+      </diffuseColor>
+      <specularColor>
+        <r>1</r>
+        <g>1</g>
+        <b>1</b>
+        <a>0</a>
+      </specularColor>
+      <defaultNormal>
+        <r>0</r>
+        <g>0</g>
+        <b>1</b>
+        <a>0</a>
+      </defaultNormal>
+      <specularPower>8</specularPower>
+      <diffuseIntensity>1</diffuseIntensity>
+      <specularIntensity>1</specularIntensity>
+    </object>
+
+
+    <object name="testObjCube">
+      <model>objCube</model>
+      <shader>default</shader>
+      <type>normal</type>
+      <blend>true</blend>
+      <shininess>
+        <x>1.0</x>
+        <y>0.2</y>
+      </shininess>
+      <textures>
+        <texture name="bricksDiffuse"/>
+        <texture name="bricksSpecular"/>
+        <texture name="bricksNormal"/>
+      </textures>
+      <position>
+        <x>320.5</x>
+        <y>81</y>
+        <z>-221.22</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>50.0</x>
+        <y>50.0</y>
+        <z>50.0</z>
+      </scale>
+      <diffuseColor>
+        <r>1</r>
+        <g>0</g>
+        <b>1</b>
+        <a>0.0</a>
+      </diffuseColor>
+      <specularColor>
+        <r>1</r>
+        <g>1</g>
+        <b>1</b>
+        <a>0</a>
+      </specularColor>
+      <defaultNormal>
+        <r>0</r>
+        <g>0</g>
+        <b>1</b>
+        <a>0</a>
+      </defaultNormal>
+      <specularPower>8</specularPower>
+      <diffuseIntensity>1</diffuseIntensity>
+      <specularIntensity>1</specularIntensity>
+    </object>
+
+
+    <object id="6">
+      <trajectory>0</trajectory>
+      <trajectorySpeed>2</trajectorySpeed>
+      <model>horse</model>
+      <!-- id model -->
+      <shader>default</shader>
+      <!-- id shader -->
+      <type>normal</type>
+      <blend>true</blend>
+      <name>Cocrcodil_verde</name>
+      <shininess>
+        <x>1.0</x>
+        <y>1.0</y>
+      </shininess>
+      <textures>
+        <texture id="4"/>
+      </textures>
+      <position>
+        <x>320.5</x>
+        <y>73</y>
+        <z>21.22</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>180</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>1.0</x>
+        <y>1.0</y>
+        <z>1.0</z>
+      </scale>
+    </object>
+
+    <!--
+		<object name="terrain">
+			<model>terrain</model>
+			<shader>default</shader>
+			<type>normal</type>
+			<textures>
+				<texture id="14"/>
+			</textures>
+			<position>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</position>
+			<rotation>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</rotation>
+			<scale>
+				<x>10.0</x>
+				<y>10.0</y>
+				<z>10.0</z>
+			</scale>
+		</object>
+		-->
+
+    <object name="fire">
+      <sound>tocloop</sound>
+      <noCollision>true</noCollision>
+      <dontDrawNormals>true</dontDrawNormals>
+      <name>fire</name>
+      <shader>fire</shader>
+      <type>fire</type>
+      <fireSpeed>0.7</fireSpeed>
+      <dispMax>0.2</dispMax>
+      <fireNumBlades>6</fireNumBlades>
+      <fireHeight>1</fireHeight>
+      <textures>
+        <texture name="fire"/>
+        <texture name="fireDisp"/>
+        <texture name="fireMask"/>
+      </textures>
+      <position>
+        <x>-100</x>
+        <y>38</y>
+        <z>100</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>25.0</x>
+        <y>25.0</y>
+        <z>25.0</z>
+      </scale>
+    </object>
+
+    <object name="fire2">
+      <noCollision>true</noCollision>
+      <dontDrawNormals>true</dontDrawNormals>
+      <name>fire</name>
+      <shader>fire</shader>
+      <type>fire</type>
+      <fireSpeed>0.7</fireSpeed>
+      <dispMax>0.2</dispMax>
+      <fireNumBlades>6</fireNumBlades>
+      <fireHeight>1</fireHeight>
+      <textures>
+        <texture name="fire"/>
+        <texture name="fireDisp"/>
+        <texture name="fireMask"/>
+      </textures>
+      <position>
+        <x>-100</x>
+        <y>38</y>
+        <z>150</z>
+      </position>
+      <rotation>
+        <x>0</x>
+        <y>0</y>
+        <z>0</z>
+      </rotation>
+      <scale>
+        <x>25.0</x>
+        <y>25.0</y>
+        <z>25.0</z>
+      </scale>
+
+    </object>
+
+  </objects>
+
+  <prefabs>
+    
+  </prefabs>
+
+
+  <ambientalLight>
+    <r>1.0</r>
+    <g>1.0</g>
+    <b>1.0</b>
+    <a>0.15</a>
+  </ambientalLight>
+
+  <fog>
+    <skyboxTexture>skybox</skyboxTexture>
+    <skyboxShader>skybox</skyboxShader>
+    <skyboxYOffset>0</skyboxYOffset>
+    <skyboxSize>1000</skyboxSize>
+    <color>
+      <r>0.7</r>
+      <g>0.7</g>
+      <b>0.7</b>
+    </color>
+    <start_radius>2000</start_radius>
+    <end_radius>2500</end_radius>
+  </fog>
+
+  <lights>
+    <light id="1">
+      <color>
+        <x>1.0</x>
+        <y>1.0</y>
+        <z>1.0</z>
+      </color>
+      
+      <direction>
+        <x>0.725362</x>
+        <y>-0.494709</y>
+        <z>-0.478658</z>
+      </direction>
+      <type>directional</type>
+    </light>
+    
+    <light id="2">
+      <following>6</following>
+      <color>
+        <x>1.0</x>
+        <y>1.0</y>
+        <z>1.0</z>
+      </color>
+      <attenuation>
+        <x>0</x>
+        <y>0.01</y>
+        <z>0.2</z>
+      </attenuation>
+      <type>point</type>
+    </light>
+    
+    <light id="3">
+      <position>
+        <x>-100</x>
+        <y>100</y>
+        <z>250</z>
+      </position>
+      <color>
+        <x>1.0</x>
+        <y>0.0</y>
+        <z>1.0</z>
+      </color>
+      <attenuation>
+        <x>0.0001</x>
+        <y>0.01</y>
+        <z>0.03</z>
+      </attenuation>
+      <type>point</type>
+    </light>
+    
+    <light>
+      <color>
+        <x>0.0</x>
+        <y>0.0</y>
+        <z>1.0</z>
+      </color>
+      <attenuation>
+        <x>0.0000001</x>
+        <y>0.00001</y>
+        <z>0.0002</z>
+      </attenuation>
+      <position>
+        <x>350</x>
+        <y>200</y>
+        <z>250</z>
+      </position>
+      <direction>
+        <x>0</x>
+        <y>-1</y>
+        <z>0</z>
+      </direction>
+      <angleCosMin>30</angleCosMin>
+      <angleCosMax>45</angleCosMax>
+      <type>spot</type>
+    </light>
+  </lights>
+
+  <trajectories>
+    <trajectory id="0">
+      <type>line_strip</type>
+      <direction>alternate</direction>
+      <iteration-count>1000</iteration-count>
+      <speed>250</speed>
+      <points>
+        <point>
+          <x>0.5</x>
+          <y>100.0</y>
+          <z>1.0</z>
+        </point>
+        <point>
+          <x>400.5</x>
+          <y>100.0</y>
+          <z>1.0</z>
+        </point>
+        <point>
+          <x>400.5</x>
+          <y>100.0</y>
+          <z>400.0</z>
+        </point>
+        <point>
+          <x>0.5</x>
+          <y>100.0</y>
+          <z>400.0</z>
+        </point>
+      </points>
+    </trajectory>
+
+    <trajectory id="1">
+      <type>circle</type>
+      <iteration-count>2</iteration-count>
+      <speed>60</speed>
+      <center>
+        <x>0</x>
+        <y>300</y>
+        <z>0</z>
+      </center>
+      <radius>300</radius>
+      <rotation>
+        <x>60</x>
+        <y>60</y>
+        <z>-30</z>
+      </rotation>
+    </trajectory>
+
+  </trajectories>
+
+  <debugSettings>
+    <objectAxes>
+      <OXColor>
+        <r>1.0</r>
+        <g>0.0</g>
+        <b>0.0</b>
+      </OXColor>
+      <OYColor>
+        <r>0.0</r>
+        <g>1.0</g>
+        <b>0.0</b>
+      </OYColor>
+      <OZColor>
+        <r>0.0</r>
+        <g>0.0</g>
+        <b>1.0</b>
+      </OZColor>
+    </objectAxes>
+    <camAxes>
+      <OXColor>
+        <r>1.0</r>
+        <g>1.0</g>
+        <b>0.0</b>
+      </OXColor>
+      <OYColor>
+        <r>0.0</r>
+        <g>1.0</g>
+        <b>1.0</b>
+      </OYColor>
+      <OZColor>
+        <r>1.0</r>
+        <g>0.0</g>
+        <b>1.0</b>
+      </OZColor>
+    </camAxes>
+  </debugSettings>
+
+</sceneManager>

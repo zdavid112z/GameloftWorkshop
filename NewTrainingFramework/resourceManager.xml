@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourceManager>
+	<models>
+		<model id="1">
+			<path>Resources/Models/croco.nfg</path>
+		</model>
+    <model name="objCube">
+      <path>Resources/Models/cube.obj</path>
+    </model>
+    <model name="horse">
+      <path>Resources/Models/horse.obj</path>
+    </model>
+    <model name="spaceship">
+      <path>Resources/Models/spaceship3.obj</path>
+    </model>
+    <model name="sphere">
+      <path>Resources/Models/sphere.obj</path>
+    </model>
+    <model name="cottage">
+      <path>Resources/Models/cottage.obj</path>
+    </model>
+		<model id="5">
+			<path>Resources/Models/bila.nfg</path>
+		</model>
+		<model name="bus">
+			<path>Resources/Models/bus.nfg</path>
+		</model>
+		<model name="terrain">
+			<path>Resources/Models/terrain.nfg</path>
+		</model>
+		<model name="skybox">
+			<path>Resources/Models/skybox.nfg</path>
+		</model>
+    <model name="cube">
+      <type>cube</type>
+    </model>
+    <model name="screenQuad">
+      <type>screenQuad</type>
+    </model>
+    <model name="axis">
+      <type>axis</type>
+      <thickness>1.5</thickness>
+      <lineLength>16</lineLength>
+      <headLength>8</headLength>
+      <quality>8</quality>
+      <headOffset>1.5</headOffset>
+    </model>
+		<!-- si aici se adauga toate modelele -->
+	</models>
+	<shaders>
+		<!--<shader id="10">
+			<vs>Resources/Shaders/modelShader.vs</vs>
+			<fs>Resources/Shaders/modelShader.fs</fs>
+		</shader>-->
+		<shader id="3">
+			<vs>Resources/Shaders/terrainShader.vs</vs>
+			<fs>Resources/Shaders/terrainShader.fs</fs>
+		</shader>
+		<shader name="default">
+			<vs>Resources/Shaders/TriangleShaderVS.vs</vs>
+			<fs>Resources/Shaders/TriangleShaderFS.fs</fs>
+		</shader>
+		<shader name="fire">
+			<vs>Resources/Shaders/fireShader.vs</vs>
+			<fs>Resources/Shaders/fireShader.fs</fs>
+		</shader>
+		<shader name="skybox">
+			<vs>Resources/Shaders/skybox.vs</vs>
+			<fs>Resources/Shaders/skybox.fs</fs>
+		</shader>
+    <shader name="singleColor">
+      <vs>Resources/Shaders/singleColor.vs</vs>
+      <fs>Resources/Shaders/singleColor.fs</fs>
+    </shader>
+    <shader name="effectPassthrough">
+      <vs>Resources/Shaders/effectPassthrough.vs</vs>
+      <fs>Resources/Shaders/effectPassthrough.fs</fs>
+    </shader>
+    <shader name="effectGrayscale">
+      <vs>Resources/Shaders/effectGrayscale.vs</vs>
+      <fs>Resources/Shaders/effectGrayscale.fs</fs>
+    </shader>
+    <shader name="effectSepia">
+      <vs>Resources/Shaders/effectSepia.vs</vs>
+      <fs>Resources/Shaders/effectSepia.fs</fs>
+    </shader>
+    <shader name="effectGaussianBlur">
+      <vs>Resources/Shaders/effectGaussianBlur.vs</vs>
+      <fs>Resources/Shaders/effectGaussianBlur.fs</fs>
+    </shader>
+    <shader name="effectLumaThreshold">
+      <vs>Resources/Shaders/effectLumaThreshold.vs</vs>
+      <fs>Resources/Shaders/effectLumaThreshold.fs</fs>
+    </shader>
+    <shader name="effectAdditive">
+      <vs>Resources/Shaders/effectAdditive.vs</vs>
+      <fs>Resources/Shaders/effectAdditive.fs</fs>
+    </shader>
+	</shaders>
+	<textures>
+		<texture id="4" type="2d">
+			<path>Resources/Textures/croco.tga</path>
+			<min_filter>LINEAR</min_filter>
+			<mag_filter>LINEAR</mag_filter>
+			<wrap_s>CLAMP_TO_EDGE</wrap_s>
+			<wrap_t>CLAMP_TO_EDGE</wrap_t>
+		</texture>
+    <texture name="spaceship_diffuse" type="2d">
+      <path>Resources/Textures/spaceship_diffuse.tga</path>
+      <min_filter>LINEAR</min_filter>
+      <mag_filter>LINEAR</mag_filter>
+      <wrap_s>CLAMP_TO_EDGE</wrap_s>
+      <wrap_t>CLAMP_TO_EDGE</wrap_t>
+    </texture>
+    <texture name="spaceship_diffuse2" type="2d">
+      <path>Resources/Textures/spaceship_diffuse2.tga</path>
+      <min_filter>LINEAR</min_filter>
+      <mag_filter>LINEAR</mag_filter>
+      <wrap_s>CLAMP_TO_EDGE</wrap_s>
+      <wrap_t>CLAMP_TO_EDGE</wrap_t>
+    </texture>
+    <texture name="spaceship_diffuse3" type="2d">
+      <path>Resources/Textures/spaceship_diffuse3.tga</path>
+      <min_filter>LINEAR</min_filter>
+      <mag_filter>LINEAR</mag_filter>
+      <wrap_s>CLAMP_TO_EDGE</wrap_s>
+      <wrap_t>CLAMP_TO_EDGE</wrap_t>
+    </texture>
+
+    <texture name="bullet_planet_terrain" type="2d">
+      <path>Resources/Textures/bullet_planet_terrain.tga</path>
+      <min_filter>LINEAR</min_filter>
+      <mag_filter>LINEAR</mag_filter>
+      <wrap_s>REPEAT</wrap_s>
+      <wrap_t>REPEAT</wrap_t>
+    </texture>
+    <texture name="basalt" type="2d">
+      <path>Resources/Textures/basalt.tga</path>
+      <min_filter>LINEAR</min_filter>
+      <mag_filter>LINEAR</mag_filter>
+      <wrap_s>REPEAT</wrap_s>
+      <wrap_t>REPEAT</wrap_t>
+    </texture>
+    <texture name="lava_rock" type="2d">
+      <path>Resources/Textures/lava_rock.tga</path>
+      <min_filter>LINEAR</min_filter>
+      <mag_filter>LINEAR</mag_filter>
+      <wrap_s>REPEAT</wrap_s>
+      <wrap_t>REPEAT</wrap_t>
+    </texture>
+    <texture name="lava" type="2d">
+      <path>Resources/Textures/lava.tga</path>
+      <min_filter>LINEAR</min_filter>
+      <mag_filter>LINEAR</mag_filter>
+      <wrap_s>REPEAT</wrap_s>
+      <wrap_t>REPEAT</wrap_t>
+    </texture>
+    
+		<texture name="dirt" type="2d">
+			<path>Resources/Textures/cotton.tga</path>
+			<min_filter>LINEAR</min_filter>
+			<mag_filter>LINEAR</mag_filter>
+			<wrap_s>REPEAT</wrap_s>
+			<wrap_t>REPEAT</wrap_t>
+		</texture>
+		<texture name="rock" type="2d">
+			<path>Resources/Textures/gummy1.tga</path>
+			<min_filter>LINEAR</min_filter>
+			<mag_filter>LINEAR</mag_filter>
+			<wrap_s>REPEAT</wrap_s>
+			<wrap_t>REPEAT</wrap_t>
+		</texture>
+		<texture name="grass" type="2d">
+			<path>Resources/Textures/candy.tga</path>
+			<min_filter>LINEAR</min_filter>
+			<mag_filter>LINEAR</mag_filter>
+			<wrap_s>REPEAT</wrap_s>
+			<wrap_t>REPEAT</wrap_t>
+		</texture>
+		<texture name="terrain_blend_map" type="2d">
+			<path>Resources/Textures/ter.tga</path>
+			<min_filter>LINEAR</min_filter>
+			<mag_filter>LINEAR</mag_filter>
+			<wrap_s>REPEAT</wrap_s>
+			<wrap_t>REPEAT</wrap_t>
+		</texture>
+		<texture name="bus" type="2d">
+			<path>Resources/Textures/bus.tga</path>
+			<min_filter>LINEAR</min_filter>
+			<mag_filter>LINEAR</mag_filter>
+			<wrap_s>CLAMP_TO_EDGE</wrap_s>
+			<wrap_t>CLAMP_TO_EDGE</wrap_t>
+		</texture>
+    <texture name="cottage_diffuse" type="2d">
+      <path>Resources/Textures/cottage_diffuse.tga</path>
+      <min_filter>LINEAR</min_filter>
+      <mag_filter>LINEAR</mag_filter>
+      <wrap_s>CLAMP_TO_EDGE</wrap_s>
+      <wrap_t>CLAMP_TO_EDGE</wrap_t>
+    </texture>
+    <texture name="cottage_normal" type="2d">
+      <path>Resources/Textures/cottage_normal.tga</path>
+      <min_filter>LINEAR</min_filter>
+      <mag_filter>LINEAR</mag_filter>
+      <wrap_s>CLAMP_TO_EDGE</wrap_s>
+      <wrap_t>CLAMP_TO_EDGE</wrap_t>
+    </texture>
+		<texture name="fire" type="2d">
+			<path>Resources/Textures/fire3.tga</path>
+			<min_filter>LINEAR</min_filter>
+			<mag_filter>LINEAR</mag_filter>
+			<wrap_s>REPEAT</wrap_s>
+			<wrap_t>REPEAT</wrap_t>
+		</texture>
+		<texture name="fireDisp" type="2d">
+			<path>Resources/Textures/DisplacementMap.tga</path>
+			<min_filter>LINEAR</min_filter>
+			<mag_filter>LINEAR</mag_filter>
+			<wrap_s>REPEAT</wrap_s>
+			<wrap_t>REPEAT</wrap_t>
+		</texture>
+		<texture name="fireMask" type="2d">
+			<path>Resources/Textures/fire_mask2.tga</path>
+			<min_filter>LINEAR</min_filter>
+			<mag_filter>LINEAR</mag_filter>
+			<wrap_s>CLAMP_TO_EDGE</wrap_s>
+			<wrap_t>CLAMP_TO_EDGE</wrap_t>
+		</texture>
+		<texture name="skybox" type="cube">
+			<path>Resources/Textures/mypepe.tga</path>
+			<min_filter>LINEAR</min_filter>
+			<mag_filter>LINEAR</mag_filter>
+			<wrap_s>CLAMP_TO_EDGE</wrap_s>
+			<wrap_t>CLAMP_TO_EDGE</wrap_t>
+		</texture>
+    <texture name="bricksDiffuse" type="2d">
+      <path>Resources/Textures/bricks_diffuse.tga</path>
+      <min_filter>LINEAR</min_filter>
+      <mag_filter>LINEAR</mag_filter>
+      <wrap_s>REPEAT</wrap_s>
+      <wrap_t>REPEAT</wrap_t>
+    </texture>
+    <texture name="bricksSpecular" type="2d">
+      <path>Resources/Textures/bricks_specular.tga</path>
+      <min_filter>LINEAR</min_filter>
+      <mag_filter>LINEAR</mag_filter>
+      <wrap_s>REPEAT</wrap_s>
+      <wrap_t>REPEAT</wrap_t>
+    </texture>
+    
+    <texture name="bricksNormal" type="2d">
+      <path>Resources/Textures/bricks_normal.tga</path>
+      <min_filter>LINEAR</min_filter>
+      <mag_filter>LINEAR</mag_filter>
+      <wrap_s>REPEAT</wrap_s>
+      <wrap_t>REPEAT</wrap_t>
+    </texture>
+    
+    <texture name="mainColorAttachment" type="2d">
+      <type>rendertarget_rgb</type>
+      <min_filter>LINEAR</min_filter>
+      <mag_filter>LINEAR</mag_filter>
+      <wrap_s>REPEAT</wrap_s>
+      <wrap_t>REPEAT</wrap_t>
+    </texture>
+
+    <texture name="auxColorAttachment" type="2d">
+      <type>rendertarget_rgb</type>
+      <min_filter>LINEAR</min_filter>
+      <mag_filter>LINEAR</mag_filter>
+      <wrap_s>REPEAT</wrap_s>
+      <wrap_t>REPEAT</wrap_t>
+    </texture>
+    
+    <!-- si aici se adauga toate texturile -->
+	</textures>
+  <sounds>
+    <sound name="destroyed">
+      <path>Resources/Sounds/destroyed.wav</path>
+    </sound>
+    <sound name="hit">
+      <path>Resources/Sounds/hit.wav</path>
+    </sound>
+    <sound name="shoot">
+      <path>Resources/Sounds/shoot.wav</path>
+    </sound>
+    <sound name="shoot_player">
+      <path>Resources/Sounds/shoot_player2.wav</path>
+    </sound>
+    <sound name="died">
+      <path>Resources/Sounds/died.wav</path>
+    </sound>
+    <sound name="toc">
+      <path>Resources/Sounds/toc.wav</path>
+    </sound>
+    <sound name="music">
+      <path>Resources/Sounds/music.wav</path>
+    </sound>
+    <sound name="toc3d">
+      <path>Resources/Sounds/toc.wav</path>
+      <is3d/>
+      <distances3d>
+        <x>5</x>
+        <y>5000</y>
+      </distances3d>
+    </sound>
+  </sounds>
+</resourceManager>
