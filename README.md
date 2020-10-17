@@ -11,3 +11,5 @@ Game engine developed during a Gameloft Workshop & a bullet hell type game creat
 - U to switch between game and debug scene
 - F to switch camera aspect ratio (used for debugging)
 - G to print camera parameters (used for debugging)
+
+![](presentation.gif)
